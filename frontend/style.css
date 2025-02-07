@@ -1,789 +1,897 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    background-image: url('neww.avif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  /* Header */
-  header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-  }
-  
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-  }
-  
-  header ul li {
-    margin: 0 1rem;
-  }
-  
-  header ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Hero Section */
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    padding: 5rem 2rem;
-    max-width: 1500px;
-    margin: 0 auto;
-    background-image: url('neww.avif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-  
-  .profile-pic {
-    margin-right: 2rem;
-  }
-  
-  .profile-pic img {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-pic img:hover {
-    transform: scale(1.1);
-  }
-  
-  .hero-text {
-    max-width: 600px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  background-image: url('neww.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+header ul li {
+  margin: 0 1rem;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 5rem 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  background-image: url('neww.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  margin-right: 2rem;
+}
+
+.profile-pic img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic img:hover {
+  transform: scale(1.1);
+}
+
+.hero-text {
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.hero h1:hover {
+  color: black;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hero .tagline {
+  font-size: 1.6rem;
+  color: black;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
+}
+
+.hero .intro {
+  font-size: 1.4rem;
+  color: black;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s 1.5s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    animation: fadeIn 2s forwards;
   }
-  
-  .hero h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: black;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease;
+  to {
+    opacity: 1;
   }
-  
-  .hero h1:hover {
-    color: black;
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-  
-  .hero .tagline {
-    font-size: 1.6rem;
-    color: black;
-    margin-top: 1rem;
-    opacity: 0;
-    animation: fadeIn 2s 1s forwards;
-  }
-  
-  .hero .intro {
-    font-size: 1.4rem;
-    color: black;
-    margin-top: 1rem;
-    opacity: 0;
-    animation: fadeIn 2s 1.5s forwards;
-  }
-  
-  /* Fade-in animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* About Me Section */
-  #about {
-    text-align: center;
-    margin: 2rem;
-  }
-  
-  .about-frame {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about-frame h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .about-frame p {
-    font-size: 1.3rem;
-    text-align: center;
-    color: #333;
-    margin-top: 1rem;
-  }
-  
-  /* Hover effect for About Me frame */
-  .about-frame:hover {
-    transform: scale(1.05); /* Slightly enlarge the frame */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Increase the shadow effect */
-  }
-  
-  /* Project Section */
-  #projects {
-    text-align: center;
-    margin: 2rem;
-    font-size: 20;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 2rem; /* Space between cards */
-  }
-  
-  .project-card {
-    background-color: transparent; /* White background for cards */
-    padding: 1.5rem; /* Inner spacing */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px); /* Lift card on hover */
-  }
-  
-  .project-card img {
-    width: 100%; /* Full-width image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for image */
-    margin-bottom: 1rem; /* Space between image and text */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
-    transition: transform 0.3s ease; /* Smooth image hover effect */
-  }
-  
-  .project-card img:hover {
-    transform: scale(1.05); /* Slight zoom-in on hover */
-  }
-  
-  .project-card h3 {
-    font-size: 1.8rem; /* Larger font for titles */
-    color: #333; /* Dark gray color for text */
-    margin: 0.5rem 0; /* Space above and below the title */
-  }
-  
-  .project-card p {
-    font-size: 1.2rem; /* Font size for description */
-    color: #666; /* Light gray color for text */
-    margin: 0; /* Remove default margin */
-  }
-  
-  /* New Frame below Projects Section */
-  #projects + section {
-    text-align: center;
-    margin: 2rem;
-    font-size: 1.3rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  #projects + section p {
-    font-size: 1.3rem;
-    color: #333;
-    line-height: 1.8;
-  }
-  
-  #projects + section a {
-    color: #0077b5;
-    text-decoration: none;
-  }
-  
-  #projects + section a:hover {
-    text-decoration: underline;
-  }
-  #experience {
-    text-align: center;
-    margin: 2rem 0;
-  }
-  
+}
+
+/* About Me Section */
+#about {
+  text-align: center;
+  margin: 2rem;
+}
+
+.about-frame {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-frame h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-frame p {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* Hover effect for About Me frame */
+.about-frame:hover {
+  transform: scale(1.05); /* Slightly enlarge the frame */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Increase the shadow effect */
+}
+
+/* Project Section */
+#projects {
+  text-align: center;
+  margin: 2rem;
+  font-size: 20;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 2rem; /* Space between cards */
+}
+
+.project-card {
+  background-color: transparent; /* White background for cards */
+  padding: 1.5rem; /* Inner spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+}
+
+.project-card img {
+  width: 100%; /* Full-width image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+  margin-bottom: 1rem; /* Space between image and text */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
+  transition: transform 0.3s ease; /* Smooth image hover effect */
+}
+
+.project-card img:hover {
+  transform: scale(1.05); /* Slight zoom-in on hover */
+}
+
+.project-card h3 {
+  font-size: 1.8rem; /* Larger font for titles */
+  color: #333; /* Dark gray color for text */
+  margin: 0.5rem 0; /* Space above and below the title */
+}
+
+.project-card p {
+  font-size: 1.2rem; /* Font size for description */
+  color: #666; /* Light gray color for text */
+  margin: 0; /* Remove default margin */
+}
+
+/* New Frame below Projects Section */
+#projects + section {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#projects + section p {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+#projects + section a {
+  color: #0077b5;
+  text-decoration: none;
+}
+
+#projects + section a:hover {
+  text-decoration: underline;
+}
+#experience {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.experience-timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.experience-item {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 3rem;
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #0077b5;
+  z-index: -1;
+}
+
+.experience-content {
+  background-color: transparent; /* Set background to transparent */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experience-item h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.experience-item p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.experience-item strong {
+  font-weight: bold;
+  color: #0077b5;
+}
+
+/* Hover Effect */
+.experience-item:hover .experience-content {
+  transform: translateX(10px); /* Slide effect on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Dot */
+.experience-item::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #0077b5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .experience-timeline {
-    position: relative;
-    margin: 0 auto;
-    padding: 2rem;
-    max-width: 1200px;
-  }
-  
-  .experience-item {
-    position: relative;
-    padding-left: 3rem;
-    margin-bottom: 3rem;
-  }
-  
-  .experience-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background-color: #0077b5;
-    z-index: -1;
-  }
-  
-  .experience-content {
-    background-color: transparent; /* Set background to transparent */
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .experience-item h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .experience-item p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .experience-item strong {
-    font-weight: bold;
-    color: #0077b5;
-  }
-  
-  /* Hover Effect */
-  .experience-item:hover .experience-content {
-    transform: translateX(10px); /* Slide effect on hover */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Timeline Dot */
-  .experience-item::after {
-    content: "";
-    position: absolute;
-    left: -7px;
-    top: 0;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #0077b5;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .experience-timeline {
-      padding: 1rem;
-    }
-  
-    .experience-item {
-      padding-left: 1rem;
-    }
-  
-    .experience-item::before {
-      left: 1rem;
-    }
-  
-    .experience-item::after {
-      left: -3px;
-    }
-  }
-  #achievements {
-    text-align: center;
-    margin: 3rem 0;
-    padding: 2rem;
-  }
-  
-  #achievements h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
-  
-  .achievement-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .achievement-item {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    transition: all 0.3s ease;
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
-  
-  .achievement-item h3 {
-    font-size: 1.7rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .achievement-item p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .achievement-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .achievement-list {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .achievement-item {
-      width: 90%;
-    }
-  }
-  #certifications {
-    text-align: center;
-    margin: 3rem 0;
-    padding: 2rem;
-  }
-  
-  #certifications h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-  }
-  
-  .certification-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 3rem;
-  }
-  
-  .certification-card {
-    width: 250px;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-  .card-front,
-  .card-back {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backface-visibility: hidden;
-  }
-  
-  .card-front {
-    background-color: #e4e4e4;
-  }
-  
-  .card-back {
-    background-color: #f9f9f9;
-    transform: rotateY(180deg);
-  }
-  
-  .certification-card:hover .card-front {
-    transform: rotateY(180deg);
-  }
-  
-  .certification-card:hover .card-back {
-    transform: rotateY(0deg);
-  }
-  
-  .card-front h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .card-front p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .card-back p {
-    font-size: 1rem;
-    color: #444;
-  }
-  
-  /* Hover Effects */
-  .certification-card:hover .card-front {
-    transform: rotateY(180deg);
-    cursor: pointer;
-  }
-  
-  .certification-card:hover .card-back {
-    transform: rotateY(0deg);
-    cursor: pointer;
-  }
-  
-  /* Fade-in animation for section title */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .certification-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .certification-card {
-      margin-bottom: 1.5rem;
-      width: 90%;
-    }
-  }
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .certification-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .certification-card {
-      margin-bottom: 1.5rem;
-      width: 90%;
-    }
-  }
-  /* Fade-in and slide-up animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .achievement-list {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .achievement-item {
-      width: 90%;
-    }
-  }
-  /* Contact Section */
-  #contact {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color:transparent;
-  }
-  
-  #contact h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  #contact p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 2rem;
-  }
-  
-  /* Form Styles */
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: transparent;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  label {
-    font-size: 1rem;
-    color: #333;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  input, textarea {
-    width: 50%;
     padding: 1rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
   }
-  
-  input:focus, textarea:focus {
-    border-color: #0077b5;
+
+  .experience-item {
+    padding-left: 1rem;
   }
-  
-  textarea {
-    resize: vertical;
+
+  .experience-item::before {
+    left: 1rem;
   }
-  
-  button.submit-btn {
-    padding: 1rem 2rem;
-    background-color: #0077b5;
-    color: #fff;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
+
+  .experience-item::after {
+    left: -3px;
   }
-  
-  button.submit-btn:hover {
-    background-color: #005f8d;
-  }
-  
-  button.submit-btn:focus {
-    outline: none;
-  }
-  
-  /* GitHub Link */
-  footer a.github-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    display: inline-block;
-  }
-  
-  footer a.github-link:hover {
-    color: #0077b5;
-    text-decoration: underline;
-  }
-  /* Social Links Container */
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 20px;
-  }
-  
-  /* Social Icon Styling */
-  .social-icon {
-    font-size: 2.5rem;
-    text-decoration: none;
-    display: inline-flex;
-    justify-content: center;
+}
+#achievements {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2rem;
+}
+
+#achievements h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.achievement-item {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: all 0.3s ease;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-item h3 {
+  font-size: 1.7rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.achievement-item p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.achievement-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievement-list {
+    flex-direction: column;
     align-items: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
-  
-  /* Hover Effects */
-  .social-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  .achievement-item {
+    width: 90%;
   }
-  
-  /* LinkedIn Customization */
-  .social-icon.linkedin {
-    background-color: #0077b5;
+}
+#certifications {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2rem;
+}
+
+#certifications h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.certification-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.certification-card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #e4e4e4;
+}
+
+.card-back {
+  background-color: #f9f9f9;
+  transform: rotateY(180deg);
+}
+
+.certification-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.certification-card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-front h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.card-front p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card-back p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Hover Effects */
+.certification-card:hover .card-front {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.certification-card:hover .card-back {
+  transform: rotateY(0deg);
+  cursor: pointer;
+}
+
+/* Fade-in animation for section title */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .social-icon.linkedin:hover {
-    background-color: #005983;
+  to {
+    opacity: 1;
   }
-  
-  /* GitHub Customization */
-  .social-icon.github {
-    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certification-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .social-icon.github:hover {
-    background-color: #24292e;
+
+  .certification-card {
+    margin-bottom: 1.5rem;
+    width: 90%;
   }
-  
-  /* Twitter Customization */
-  .social-icon.twitter {
-    background-color: #1da1f2;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certification-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .social-icon.twitter:hover {
-    background-color: #0a85d9;
+
+  .certification-card {
+    margin-bottom: 1.5rem;
+    width: 90%;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero {
-      padding: 3rem 1rem;
-    }
-  
-    .project-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .about-frame p {
-      font-size: 1.1rem;
-    }
+}
+/* Fade-in and slide-up animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  /* Footer Styles */
-  .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-    position: relative;
+  to {
+    opacity: 1;
   }
-  
-  .footer-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1rem;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .footer p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    color: #ccc;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .footer p strong {
-    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievement-list {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .achievement-item {
+    width: 90%;
+  }
+}
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color:transparent;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea {
+  width: 50%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #0077b5;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button.submit-btn {
+  padding: 1rem 2rem;
+  background-color: #0077b5;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+button.submit-btn:hover {
+  background-color: #005f8d;
+}
+
+button.submit-btn:focus {
+  outline: none;
+}
+
+/* GitHub Link */
+footer a.github-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+footer a.github-link:hover {
+  color: #0077b5;
+  text-decoration: underline;
+}
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Social Icon Styling */
+.social-icon {
+  font-size: 2.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effects */
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* LinkedIn Customization */
+.social-icon.linkedin {
+  background-color: #0077b5;
+}
+
+.social-icon.linkedin:hover {
+  background-color: #005983;
+}
+
+/* GitHub Customization */
+.social-icon.github {
+  background-color: #333;
+}
+
+.social-icon.github:hover {
+  background-color: #24292e;
+}
+
+/* Twitter Customization */
+.social-icon.twitter {
+  background-color: #1da1f2;
+}
+
+.social-icon.twitter:hover {
+  background-color: #0a85d9;
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.footer p strong {
+  color: #fff;
+}
+
+.footer-socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem 0 0;
+  gap: 1rem;
+}
+
+.footer-socials li {
+  display: inline-block;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #1da1f2; /* Adjust to highlight color, e.g., Twitter blue */
+  transform: scale(1.2);
+}
+
+/* Heart Animation */
+.footer p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer p:nth-child(2)::after {
   
+  color: red;
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
   .footer-socials {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 1rem 0 0;
-    gap: 1rem;
-  }
-  
-  .footer-socials li {
-    display: inline-block;
-  }
-  
-  .footer-socials a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .footer-socials a:hover {
-    color: #1da1f2; /* Adjust to highlight color, e.g., Twitter blue */
-    transform: scale(1.2);
-  }
-  
-  /* Heart Animation */
-  .footer p:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 0.5rem;
   }
-  
-  .footer p:nth-child(2)::after {
-    
-    color: red;
-    animation: heartbeat 1.5s infinite;
+
+  .footer-socials a {
+    font-size: 1.2rem;
   }
-  
-  @keyframes heartbeat {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
+}
+/* Base styles for desktop */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+
+.hero .profile-pic img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.hero .hero-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero .hero-text h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+}
+
+.hero .hero-text p {
+  font-size: 1.2em;
+  margin: 0 0 20px;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-card {
+  background: #f4f4f4;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+}
+
+.project-card img {
+  max-width: 100%;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
   }
-  
-  /* Responsive Footer */
-  @media (max-width: 768px) {
-    .footer-socials {
-      gap: 0.5rem;
-    }
-  
-    .footer-socials a {
-      font-size: 1.2rem;
-    }
+
+  .hero .hero-text {
+    margin-top: 20px;
   }
-  
+
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero .hero-text p {
+    font-size: 1em;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
+}
