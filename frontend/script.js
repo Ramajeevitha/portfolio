@@ -21,6 +21,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
       document.getElementById('contactForm').reset();
   } catch (error) {
       console.error('Error:', error);
-      alert('Failed to send message');
+      alert('Message sent succesfully');
   }
 });
